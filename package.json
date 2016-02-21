@@ -22,7 +22,7 @@
   "scripts": {
     "start": "concurrently \"npm run client\" \"npm run server\"",
     "client": "cross-env kotatsu serve app/main.js --index index.html --config webpack.config.js --devtool eval-source-map --proxy /api http://localhost:4000/api",
-    "server": "cross-env kotatsu start start.js",
+    "server": "cross-env kotatsu start start.js --source-maps",
     "build": "concurrently \"npm run client:build\" \"npm run server:build\"",
     "client:build": "cross-env NODE_ENV=production kotatsu build client app/main.js --config webpack.production.config.js --minify -o dist/client_bundle.js ",
     "server:build": "cross-env NODE_ENV=production kotatsu build server start.js --config webpack.production.config.js --minify -o dist/server_bundle.js "
