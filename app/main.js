@@ -11,10 +11,13 @@ import ColorChanger from './components/ColorChanger';
 
 const controller = Controller(Model({}));
 
+import ModulesProvider from 'cerebral-provider-modules';
+controller.addContextProvider(ModulesProvider);
+
 controller.addModules({
   example: Example(),
 
-  http: Http(),
+  'cerebral-module-http': Http(),
   devtools: Devtools(),
   router: Router({
     '/': 'example.redirectRoot',
