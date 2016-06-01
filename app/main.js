@@ -11,9 +11,6 @@ import ColorChanger from './components/ColorChanger';
 
 const controller = Controller(Model({}));
 
-import ModulesProvider from 'cerebral-provider-modules';
-controller.addContextProvider(ModulesProvider);
-
 controller.addModules({
   example: Example(),
 
