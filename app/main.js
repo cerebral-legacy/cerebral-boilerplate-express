@@ -14,7 +14,7 @@ const controller = Controller(Model({}));
 controller.addModules({
   example: Example(),
 
-  http: Http(),
+  'cerebral-module-http': Http(),
   devtools: Devtools(),
   router: Router({
     '/': 'example.redirectRoot',

@@ -1,2 +1,3 @@
-node_modules
+.kotatsu
 dist
+node_modules
